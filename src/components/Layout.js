@@ -1,10 +1,14 @@
+import { Outlet } from "react-router-dom";
+
 export default function Layout(){
     return(
     <div class="container">
     <header>
         <h1>Ressursarkiv</h1>
     </header>
+    <Outlet>
     <main>
+        
         <nav>
 
         </nav>
@@ -12,6 +16,7 @@ export default function Layout(){
             
         </div>
     </main>
+    </Outlet>
     </div> 
     )
 }
