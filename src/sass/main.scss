@@ -13,53 +13,85 @@ div.container {
     width: 100%;
     max-width: $maxwidth;
     margin: 0 auto;
-}
 
-button {
-    color: $grey;
-    background-color: $greyBackground;
-    text-decoration: none;
-    padding: .5rem 1rem;
+}
+header {
+    width: 100%;
+    max-width: $maxwidth;
     border: 2px solid $greyBorder;
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: x-large;
-    padding: 1.5rem;
-    margin-right: 1rem;
-    border-bottom: none;
-
-        &:hover, &.active{
-            color: white;
-            background-color: $teal;
-            border: 2px solid $teal;
-            border-bottom: none;
-            transition: ease-in-out .25s;
-        }
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    h1{
+        padding: 1rem;
+    }
+   
 }
-
+.navbar {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    padding-left: 0;
+        a{
+        text-decoration: none;
+        
+            li{
+            color: $grey;
+            background-color: $greyBackground;
+            list-style-type: none;
+            border: 2px solid $greyBorder;
+            text-transform: uppercase;
+            font-size: x-large;
+            padding: 1.5rem;
+            margin-right: 1rem;
+            border-bottom: none;
+            
+            &:hover, &.active{
+                color: white;
+                background-color: $teal;
+                border: 2px solid $teal;
+                border-bottom: none;
+                transition: ease-in-out .25s;
+                }
+            }}     
+}
+  
+    
+    
+    
+    
 .hidden {
     visibility: hidden;
     opacity: 0;
 }
 
-main{
-    article{
+.resourceBody{
+    width: 100%;
+    max-width: $maxwidth;
+    border: 2px solid $greyBorder;
+    border-top: 5px solid $teal;
         a{
             color: $linkTeal;
+
         }
-        h2{
+        h1{
             width: 100%;
             display: block;
             text-transform: uppercase;
             padding-left: 1rem;
         }
-        p {
+        li {
+            list-style-type: none;
             width: 60%;
-            padding-left: 1rem;
+            list-style-type: circle;
         }
         ul {
             padding-left: 2rem;
             
         }
-    }
+        p {
+            padding-left: 1rem;
+        }
+    
 }

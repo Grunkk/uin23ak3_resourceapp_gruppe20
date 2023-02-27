@@ -6,7 +6,7 @@ function ResourcePage(props) {
   const filteredResources = resources.filter(resource => resource.category === category);
 
   return (
-    <div>
+    <div className='resourceBody'>
       <h1>Resources for {category}</h1>
       <ul>
         {filteredResources.map((resource, index) => (

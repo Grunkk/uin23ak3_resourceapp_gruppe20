@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
-    <div>
-      <ul>
-        <li><Link to="/html">HTML</Link></li>
-        <li><Link to="/css">CSS</Link></li>
-        <li><Link to="/javascript">JavaScript</Link></li>
-        <li><Link to="/react">React</Link></li>
-        <li><Link to="/sanity">Sanity</Link></li>
+    <div className='main'>
+      <ul className='navbar'>
+        <Link to="/html"><li>HTML</li></Link>
+        <Link to="/css"><li>CSS</li></Link>
+        <Link to="/javascript"><li>JavaScript</li></Link>
+        <Link to="/react"><li>React</li></Link>
+        <Link to="/sanity"><li>Sanity</li></Link>
       </ul>
     </div>
   );

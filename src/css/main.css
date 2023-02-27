@@ -13,20 +13,40 @@ div.container {
   margin: 0 auto;
 }
 
-button {
+header {
+  width: 100%;
+  max-width: 1200px;
+  border: 2px solid #D3D3D3;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.navbar a {
+  text-decoration: none;
+}
+.navbar a li {
   color: #707070;
   background-color: #F5F5F5;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
+  list-style-type: none;
   border: 2px solid #D3D3D3;
-  display: inline-block;
   text-transform: uppercase;
   font-size: x-large;
   padding: 1.5rem;
   margin-right: 1rem;
   border-bottom: none;
 }
-button:hover, button.active {
+.navbar a li:hover, .navbar a li.active {
   color: white;
   background-color: #25DFE6;
   border: 2px solid #25DFE6;
@@ -39,21 +59,31 @@ button:hover, button.active {
   opacity: 0;
 }
 
-main article a {
+.resourceBody {
+  width: 100%;
+  max-width: 1200px;
+  border: 2px solid #D3D3D3;
+  border-top: 5px solid #25DFE6;
+}
+.resourceBody a {
   color: #00C1C9;
 }
-main article h2 {
+.resourceBody h1 {
   width: 100%;
   display: block;
   text-transform: uppercase;
   padding-left: 1rem;
 }
-main article p {
+.resourceBody li {
+  list-style-type: none;
   width: 60%;
-  padding-left: 1rem;
+  list-style-type: circle;
 }
-main article ul {
+.resourceBody ul {
   padding-left: 2rem;
+}
+.resourceBody p {
+  padding-left: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
