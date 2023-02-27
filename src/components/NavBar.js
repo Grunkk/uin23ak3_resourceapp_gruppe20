@@ -1,158 +1,75 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 
-export default function Navbar() {
-  const [htmlDropdown, setHtmlDropdown] = useState(false);
-  const [cssDropdown, setCssDropdown] = useState(false);
-  const [jsDropdown, setJsDropdown] = useState(false);
-  const [reactDropdown, setReactDropdown] = useState(false);
-  const [cmsDropdown, setCmsDropdown] = useState(false);
+function Tabs({ tabs }) {
+  const [activeTab, setActiveTab] = useState(0);
 
-  const handleHtmlDropdown = () => {
-    setHtmlDropdown(!htmlDropdown);
+  const handleTabClick = (index) => {
+    setActiveTab(index);
   };
 
-  const handleCssDropdown = () => {
-    setCssDropdown(!cssDropdown);
-  };
+  function HomeTabContent() {
+    return <div>Home content</div>;
+  }
 
-  const handleJsDropdown = () => {
-    setJsDropdown(!jsDropdown);
-  };
+  function AboutTabContent() {
+    return <div>About content</div>;
+  }
 
-  const handleReactDropdown = () => {
-    setReactDropdown(!reactDropdown);
-  };
+  function ContactTabContent() {
+    return <div>Contact content</div>;
+  }
 
-  const handleCmsDropdown = () => {
-    setCmsDropdown(!cmsDropdown);
-  };
-
-  const listStyle = {
-    listStyleType: "none",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    margin: 100,
-    padding: 0
-  };
-
-  const linkStyle = {
-    color: "#000",
-    textDecoration: "none",
-    margin: "0 10px"
-  };
-
-  const dropdownStyle = {
-    position: "absolute",
-    display: "flex",
-    flexDirection: "column",
-    zIndex: 1,
-    backgroundColor: "#fff",
-    borderRadius: "0 0 5px 5px",
-    boxShadow: "0 2px 5px rgba(0, 0, 0, 0.3)",
-    minWidth: "100px"
-  };
-
-  const dropdownLinkStyle = {
-    color: "#000",
-    textDecoration: "none",
-    padding: "10px"
-  };
+  const tabContentComponents = [
+    <HomeTabContent />,
+    <AboutTabContent />,
+    <ContactTabContent />,
+  ];
 
   return (
-    <nav>
-      <ul style={listStyle}>
-        <li>
-          <Link to="/html" style={linkStyle} onClick={handleHtmlDropdown}>
-            HTML
-          </Link>
-          {htmlDropdown && (
-            <div style={dropdownStyle}>
-              <Link to="/html/W3Schools" style={dropdownLinkStyle}>
-                Introduction
-              </Link>
-              <Link to="/html/basics" style={dropdownLinkStyle}>
-                Basics
-              </Link>
-              <Link to="/html/tables" style={dropdownLinkStyle}>
-                Tables
-              </Link>
-            </div>
-          )}
-        </li>
-        <li>
-          <Link to="/css" style={linkStyle} onClick={handleCssDropdown}>
-            CSS
-          </Link>
-          {cssDropdown && (
-            <div style={dropdownStyle}>
-              <Link to="/css/introduction" style={dropdownLinkStyle}>
-                Introduction
-              </Link>
-              <Link to="/css/syntax" style={dropdownLinkStyle}>
-                Syntax
-              </Link>
-              <Link to="/css/boxmodel" style={dropdownLinkStyle}>
-                Box Model
-              </Link>
-            </div>
-          )}
-        </li>
-        <li>
-          <Link to="/javascript" style={linkStyle} onClick={handleJsDropdown}>
-            JavaScript
-          </Link>
-          {jsDropdown && (
-            <div style={dropdownStyle}>
-              <Link to="/javascript/introduction" style={dropdownLinkStyle}>
-                Introduction
-              </Link>
-              <Link to="/javascript/variables" style={dropdownLinkStyle}>
-                Variables
-              </Link>
-              <Link to="/javascript/functions" style={dropdownLinkStyle}>
-                Functions
-              </Link>
-            </div>
-          )}
-        </li>
-        <li>
-          <Link to="/react" style={linkStyle} onClick={handleReactDropdown}>
-            React
-          </Link>
-          {reactDropdown && (
-            <div style={dropdownStyle}>
-              <Link to="/react/introduction" style={dropdownLinkStyle}>
-                Introduction
-              </Link>
-              <Link to="/react/components" style={dropdownLinkStyle}>
-                Components
-              </Link>
-              <Link to="/react/hooks" style={dropdownLinkStyle}>
-                Hooks
-              </Link>
-            </div>
-          )}
-        </li>
-        <li>
-          <Link to="/headless-cms" style={linkStyle} onClick={handleCmsDropdown}>
-            Headless CMS
-          </Link>
-          {cmsDropdown && (
-            <div style={dropdownStyle}>
-              <Link to="/headless-cms/introduction" style={dropdownLinkStyle}>
-                Introduction
-              </Link>
-              <Link to="/headless-cms/content-modeling" style={dropdownLinkStyle}>
-                Content Modeling
-              </Link>
-              <Link to="/headless-cms/api" style={dropdownLinkStyle}>
-                API
-              </Link>
-            </div>
-          )}
-        </li>
-      </ul>
-    </nav>
-  )};
+    <>
+      <div className="tabs">
+        {tabs.map((tab, index) => (
+          <button
+            key={index}
+            className={`tab ${index === activeTab ? "active" : ""}`}
+            onClick={() => handleTabClick(index)}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+      <div className="tab-content">
+        {tabContentComponents.map((content, index) => (
+          <div
+            key={index}
+            className={`tab-pane ${index === activeTab ? "active" : ""}`}
+          >
+            {content}
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
+export default function Navbar() {
+  const tabs = [
+    {
+      label: "HTLM",
+    },
+    {
+      label: "CSS",
+    },
+    {
+      label: "Javascript",
+    },
+    {
+      label: "React",
+    },
+    {
+      label: "headless-cms",
+    },
+  ];
+
+  return <Tabs tabs={tabs} />;
+}
