@@ -1,0 +1,59 @@
+body {
+  font-family: sans-serif;
+  color: #707070;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+div.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+button {
+  color: #707070;
+  background-color: #F5F5F5;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid #D3D3D3;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: x-large;
+  padding: 1.5rem;
+  margin-right: 1rem;
+  border-bottom: none;
+}
+button:hover, button.active {
+  color: white;
+  background-color: #25DFE6;
+  border: 2px solid #25DFE6;
+  border-bottom: none;
+  transition: ease-in-out 0.25s;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+main article a {
+  color: #00C1C9;
+}
+main article h2 {
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+  padding-left: 1rem;
+}
+main article p {
+  width: 60%;
+  padding-left: 1rem;
+}
+main article ul {
+  padding-left: 2rem;
+}
+
+/*# sourceMappingURL=main.css.map */
