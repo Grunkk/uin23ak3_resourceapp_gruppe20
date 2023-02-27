@@ -1,18 +1,12 @@
-import { Link } from "react-router-dom";
-import ResourcePage from "./ResourcePage";
+import React from 'react';
 
-
-export default function Main({resources}){
-    return(
-        <>
-        <section>
-            <h2>test</h2>
-                {resources.map((res, index) => (
-                    <Link key={index} to={res?.resources.category.replace(/\s/g, "-").toLowerCase()}>
-                        <ResourcePage />
-                    </Link>
-                ))}
-        </section>
-        </>
-    )
+function Main() {
+  return (
+    <div>
+      <h1>Welcome to the Resource Page!</h1>
+      <p>Click on one of the categories in the navigation bar to view resources.</p>
+    </div>
+  );
 }
+
+export default Main;

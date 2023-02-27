@@ -1,19 +1,20 @@
-import { useParams } from "react-router-dom"
+import React from 'react';
+import { resources } from '../ressurser/ressurser.js';
 
-export default function ResourcePage({resources}){
-    const {slug} = useParams()
-    const resource = resources.find((res) => res?.resources.category.replace(/\s/g, "-").toLowerCase() === slug)
-    console.log(resource)
+function ResourcePage(props) {
+  const category = props.category;
+  const filteredResources = resources.filter(resource => resource.category === category);
 
-    return(
-
-        <section>
-            <h2>{resource?.resources?.category}</h2>
-
-            <ul>{resource?.resources?.title.map((ressurser) => (
-                <a href={resource?.resources?.url}><li>{ressurser}</li></a>
-                //<a href={resource?.resources?.url}><li>{resource?.resources?.title}</li></a>
-            ))}</ul>
-        </section>
-    )
+  return (
+    <div>
+      <h1>Resources for {category}</h1>
+      <ul>
+        {filteredResources.map((resource, index) => (
+          <li key={index}><a href={resource.url} target="_blank" rel="noopener noreferrer">{resource.title}</a></li>
+        ))}
+      </ul>
+    </div>
+  );
 }
+
+export default ResourcePage;
