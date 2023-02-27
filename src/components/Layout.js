@@ -4,10 +4,11 @@ import Html from "../pages/Html";
 import Javascript from "../pages/Javascript";
 import React from "../pages/React";
 import Sanity from "../pages/Sanity";
+import Main from "./Main";
 
 export default function Layout({handleclick}){
     return(
-    <div class="container">
+    <div className="container">
     <header>
         <h1>Ressursarkiv</h1>
     </header>
@@ -19,7 +20,7 @@ export default function Layout({handleclick}){
             <button><Sanity/></button>
         </nav>
     <main>
-         <Outlet/>
+         <Main />
     
     </main>
     
