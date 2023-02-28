@@ -71,6 +71,7 @@ header {
     max-width: $maxwidth;
     border: 2px solid $greyBorder;
     border-top: 5px solid $teal;
+    min-height: 200px;
         a{
             color: $linkTeal;
 

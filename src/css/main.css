@@ -64,6 +64,7 @@ header h1 {
   max-width: 1200px;
   border: 2px solid #D3D3D3;
   border-top: 5px solid #25DFE6;
+  min-height: 200px;
 }
 .resourceBody a {
   color: #00C1C9;
