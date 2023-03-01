@@ -31,6 +31,7 @@ header h1 {
   flex-direction: row;
   margin-bottom: 0;
   padding-left: 0;
+  flex-wrap: wrap;
 }
 .navbar a {
   text-decoration: none;
@@ -88,3 +89,4 @@ header h1 {
 }
 
 /*# sourceMappingURL=main.css.map */
+
