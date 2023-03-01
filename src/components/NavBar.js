@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
+  
+  const handleClick = event => {
+    
+    const buttonElements = document.querySelectorAll(".inactive");
+    buttonElements.forEach((element) => {
+        element.classList.replace("active", "inactive");
+    });
+
+    event.currentTarget.classList.add('active')
+  }
+
+  
   return (
-    <div className='main'>
       <ul className='navbar'>
-        <Link to="/html"><li>HTML</li></Link>
-        <Link to="/css"><li>CSS</li></Link>
-        <Link to="/javascript"><li>JavaScript</li></Link>
-        <Link to="/react"><li>React</li></Link>
-        <Link to="/sanity"><li>Sanity</li></Link>
+        <Link to="/html"><li className="inactive" onClick={handleClick}>HTML</li></Link>
+        <Link to="/css" ><li className="inactive" onClick={handleClick}>CSS</li></Link>
+        <Link to="/javascript" ><li className="inactive" onClick={handleClick}>JavaScript</li></Link>
+        <Link to="/react" ><li className="inactive" onClick={handleClick}>React</li></Link>
+        <Link to="/sanity" ><li className="inactive" onClick={handleClick}>Sanity</li></Link>
       </ul>
-    </div>
   );
 }
 

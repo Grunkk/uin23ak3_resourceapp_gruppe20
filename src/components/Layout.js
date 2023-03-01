@@ -7,8 +7,10 @@ function Layout(props) {
       <header>
           <h1>RESSURSARKIV</h1>
       </header>
+      <main>
       <NavBar />
       {props.children}
+      </main>
     </div>
   );
 }
