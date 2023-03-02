@@ -93,35 +93,12 @@ header h1 {
   padding-left: 1rem;
 }
 
-<<<<<<< HEAD
 /* Media query for screens larger than 768px */
-=======
->>>>>>> fdd825596006b8a7676df583349611c3ca57aec4
 @media screen and (min-width: 768px) {
   header {
     flex-direction: row;
     align-items: center;
   }
-<<<<<<< HEAD
-=======
-
-  .navbar {
-    margin-bottom: 0rem;
-  }
-
-  .navbar a li {
-    margin-right: 2rem;
-    padding: 1rem;
-  }
-
-  .resourceBody li {
-    width: 80%;
-  }
-
-}
-
-/*# sourceMappingURL=main.css.map */
->>>>>>> fdd825596006b8a7676df583349611c3ca57aec4
 
   .navbar {
     margin-bottom: 0rem;
