@@ -93,7 +93,6 @@ header h1 {
   padding-left: 1rem;
 }
 
-/* Media query for screens larger than 768px */
 @media screen and (min-width: 768px) {
   header {
     flex-direction: row;
@@ -114,7 +113,6 @@ header h1 {
   }
 }
 
-/* Media query for screens larger than 1200px */
 @media screen and (min-width: 1200px) {
   header {
     margin-top: 1rem;
