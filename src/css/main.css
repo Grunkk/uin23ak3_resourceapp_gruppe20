@@ -88,5 +88,26 @@ header h1 {
   padding-left: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar {
+    margin-bottom: 0rem;
+  }
+
+  .navbar a li {
+    margin-right: 2rem;
+    padding: 1rem;
+  }
+
+  .resourceBody li {
+    width: 80%;
+  }
+
+}
+
 /*# sourceMappingURL=main.css.map */
 
