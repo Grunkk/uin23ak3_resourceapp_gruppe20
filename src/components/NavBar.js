@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
@@ -16,7 +15,7 @@ function NavBar() {
   
   return (
       <>
-        <Link to="/html"><li className="active" onClick={handleClick}>HTML</li></Link>
+        <Link to="/html"><li className="inactive" onClick={handleClick}>HTML</li></Link>
         <Link to="/css" ><li className="inactive" onClick={handleClick}>CSS</li></Link>
         <Link to="/javascript" ><li className="inactive" onClick={handleClick}>JavaScript</li></Link>
         <Link to="/react" ><li className="inactive" onClick={handleClick}>React</li></Link>

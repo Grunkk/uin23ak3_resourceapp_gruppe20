@@ -10,7 +10,7 @@ function ResourcePage(props) {
       <h1>Resources for {category}</h1>
       <ul>
         {filteredResources.map((resource, index) => (
-          <li key={index}><a href={resource.url} target="_blank" rel="noopener noreferrer">{resource.title}</a></li>
+          <li key={index}><a href={resource.url}>{resource.title}</a></li>
         ))}
       </ul>
     </div>
